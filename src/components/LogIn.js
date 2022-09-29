@@ -29,7 +29,7 @@ export default function LogIn() {
             <h1>Artist Login</h1>
 
             <div className="row">
-              <h2>Unicode</h2>
+              <h2>Email</h2>
               <div className="field">
                 <input
                   type="text"
@@ -37,9 +37,9 @@ export default function LogIn() {
                   name="userUni"
                   defaultValue={user.userPhoneNo}
                   onchange={getUserData}
-                  placeholder="Enter Your Unicode Here"
+                  placeholder="Enter Your Email Here"
                 />
-                <i className="fa fa-eye" aria-hidden="true" />
+                <i className="fa fa-envelope" aria-hidden="true" />
               </div>
             </div>
             <div className="row">

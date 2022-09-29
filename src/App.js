@@ -8,6 +8,8 @@ import SignUp from "./components/signUp";
 import AdminLogin from "./components/AdminLogin";
 import AfterLogInArtist from "./components/AfterLogInArtist";
 import HidMenu from "./components/HidMenu";
+import Events from "./components/Events";
+import Contact from "./components/Contact";
 const App = () => {
   return (
     <Router>
@@ -25,6 +27,10 @@ const App = () => {
           {/* <Route path="/afterartlogin" element={<AfterLogInArtist />} /> */}
         </Routes>
         <About />
+        <div className="frame">
+          <Events />
+          <Contact />
+        </div>
       </div>
     </Router>
   );

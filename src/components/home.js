@@ -9,6 +9,7 @@ export default function home() {
           Resistor your self and get verified to <br /> have personalised id
           card for your event
         </h2>
+        <div className="btns h-btn">Explore Events</div>
       </div>
       <div className="h-right">
         <img
