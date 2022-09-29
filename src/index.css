@@ -19,10 +19,13 @@ body {
 nav {
   height: auto;
   width: 100%;
-  background-color: #407cff;
+  background: #8d2de2ca;
+  background: linear-gradient(to right, #4b00e0e0, #8d2de2e0);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   position: fixed;
+  top: 0 !important;
   padding: 12px 10vw;
   justify-content: space-between;
   z-index: 1000000;
@@ -56,11 +59,12 @@ nav .logo img {
 .hid-menu {
   height: 100vh;
   width: 300px;
-  background-color: rgba(134, 181, 255, 0.4);
+  background: #8103ff25;
   backdrop-filter: blur(10px);
   z-index: 1000000;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 0 !important;
+  top: 0 !important;
   display: flex;
   flex-direction: column;
 }
@@ -108,7 +112,13 @@ nav .logo img {
   color: white;
   font-size: 2rem !important;
 }
-
+.close {
+  /* background-color: red; */
+  display: flex;
+}
+.close .close-btn {
+  color: black;
+}
 @media only screen and (max-width: 670px) {
   .nav-btns {
     flex-direction: column;
@@ -131,6 +141,63 @@ nav .logo img {
   .field {
     width: 70vw !important;
   }
+  /*=============home===========-*/
+  .Home {
+    flex-direction: column;
+    justify-content: center !important;
+    margin-bottom: 50px;
+    min-height: fit-content !important;
+    width: 100vw;
+    margin-top: 20vh;
+    background: white !important;
+    gap: 0 !important;
+  }
+  .Home .h-left {
+    padding: 0;
+  }
+  .Home .home-t {
+    font-size: 2rem !important;
+    color: rgb(23, 23, 23) !important;
+  }
+  .Home .h-right img {
+    width: 55vw !important;
+    min-width: 300px;
+  }
+
+  .gray {
+    color: rgb(35, 35, 35) !important;
+    font-size: 1.3rem;
+  }
+  .Home h3 {
+    font-size: 1.5rem !important;
+  }
+  .h-left {
+    padding: 10vh 15vw 3vh 15vw;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  /*===================about=====================*/
+  .about {
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    background: white !important;
+  }
+  .about .a-left {
+    /* background-color: green; */
+    width: 80vw;
+  }
+  .a-right {
+    height: 85vh !important;
+    width: 75vw !important;
+    min-width: 440px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
 }
 .left-i {
   background-color: rgb(253, 253, 253) !important;
@@ -138,16 +205,26 @@ nav .logo img {
 
 /*=========================== sections ============================*/
 .Home {
-  height: 100vh;
+  height: auto;
   width: 100vw;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15vw;
+  min-height: 90vh;
+  padding: 0 15vw !important;
+  background: url('https://raw.githubusercontent.com/KHUNTPRIYANSH/site_photos/main/bg6.png');
+  background-position: bottom right;
+  background-position-y: -200px;
+  background-position-x: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gray {
+  color: rgb(35, 35, 35);
 }
 .Home .h-right img {
-  width: 500px;
+  width: 35vw;
+  min-width: 300px;
 }
 .h-left {
   display: flex;
@@ -157,5 +234,80 @@ nav .logo img {
   gap: 5vh;
 }
 .Home h1 {
-  font-size: 3rem !important;
+  font-size: 3.3rem !important;
+  text-transform: capitalize;
+  color: rgb(10, 10, 10);
+}
+.Home h3 {
+  color: gray;
+}
+/*===================about=====================*/
+.about {
+  height: auto;
+  width: 100vw;
+  gap: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10vh 15vw;
+  background: url('https://raw.githubusercontent.com/KHUNTPRIYANSH/site_photos/main/bg-line.png');
+  background-position: center;
+  background-size: cover;
+}
+.a-left {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.a-left .s-title {
+  font-size: 1.1rem;
+  color: rgb(35, 35, 35);
+  margin: 15px 0;
+  text-align: justify;
+}
+.a-left .blue {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+}
+.a-left .tt-title {
+  font-size: 1.4rem;
+}
+.a-right {
+  height: 85vh;
+  width: 30vw;
+  min-width: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.a-left .btns {
+  margin-top: 20px;
+}
+
+.a-right video {
+  height: 140%;
+  position: relative;
+  bottom: 60px;
+}
+@media only screen and (max-width: 430px) {
+  .a-left .s-title {
+    font-size: 1.2rem !important;
+  }
+  .a-left .blue {
+    font-size: 1.5rem;
+  }
+  .a-left .tt-title h1 {
+    font-size: 2rem !important;
+    padding: 0;
+    margin: 0 !important;
+  }
+  .a-right {
+    height: 65vh !important;
+    width: 75vw !important;
+    overflow: hidden;
+    border-radius: 15px;
+  }
 }

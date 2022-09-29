@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./components/Nav";
 import LogIn from "./components/LogIn";
 import Home from "./components/home";
+import About from "./components/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/signUp";
 import AdminLogin from "./components/AdminLogin";
@@ -13,17 +14,17 @@ const App = () => {
       <div className="App">
         <Nav />
 
-        <Home />
         <Routes>
           <Route path="/hidMenu" element={<HidMenu />} />
-          <Route path="/" />
         </Routes>
+        <Home />
         <Routes>
           <Route path="/adminLogin" element={<AdminLogin />} />
           <Route path="/" element={<LogIn />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path="/afterartlogin" element={<AfterLogInArtist />} />
+          {/* <Route path="/afterartlogin" element={<AfterLogInArtist />} /> */}
         </Routes>
+        <About />
       </div>
     </Router>
   );
