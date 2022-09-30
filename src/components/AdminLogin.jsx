@@ -44,6 +44,20 @@ const AdminLogin = () => {
                 </div>
               </div>
               <div className="row">
+                <h2>Unique Id</h2>
+                <div className="field">
+                  <input
+                    type="text"
+                    required
+                    name="userId"
+                    defaultValue={user.userId}
+                    onchange={getUserData}
+                    placeholder="Enter Your Unique Id Here"
+                  />
+                  <i className="fa fa-key" aria-hidden="true" />
+                </div>
+              </div>
+              <div className="row">
                 <h2>Password</h2>
                 <div className="field">
                   <input
